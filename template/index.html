@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Placement Prediction</title>
+  </head>
+ 
+  <body style = "background-color:rgb(60, 93, 243); font-family: Andale Mono, monospace; font-size: 20px; color: rgb(243, 243, 245); text-align: center;">
+      
+    
+      <form action="{{ url_for('predict')}}" method="post" style="padding: 10px 10px;">
+    
+        <h1 style="background-color: rgb(247, 1, 1);">{{prediction_texts}}</h1>
+  
+        <h1>Check your Employability</h1>
+        <p style = "font-size: 25px;">Hi, I am Mohit, I buit a Machine learning model<br> that predicts your chances of getting placed. But this is just model,<br><b>Future is not predefined, you can always change it. Have a good Day!</b></p>
+       
+     
+     
+        <h2>Check Your Employability</h2>
+       
+        <div class="info">
+          <h3>SSC Percentage</h3>
+          <input style="padding: 15px;" type="number" name="ssc_p" placeholder="SSC percentage" required="required">
+          <h3>SSC Board</h3><br><select style="padding: 15px;" name="board_type" required="required">
+            <option value="board" selected>Board</option>
+            <option value=0>Central Board</option>           
+            <option value=1>Others</option>
+          </select>
+          <h3>HSC Percentage</h3>
+          <input style="padding: 15px;" type="number" name="hsc_p" placeholder="Hish School percentage" required="required">
+          <h3>HSC Board</h3><br><select style="padding: 15px;" name="hscboard_type" required="required">
+            <option value="Board" selected>Board</option>
+            <option value=0>Central-Board</option>           
+            <option value=1>Others</option>
+          </select>
+          <h3>HSC Board Stream</h3><br><select style="padding: 15px;" name="hscstream" required="required">
+            <option value="b_stream" selected>HSC Board Stream</option>
+            <option value=2>Science</option>           
+            <option value=1>Commerce</option>
+            <option value=0>Arts</option>
+          </select>
+          <h3>Degree Percentage</h3>
+          <input style="padding: 15px;" type="number" name="degree_p", placeholder = 'Degree percentage' required="required">
+          <h3>Degree Type</h3><br><select style="padding: 15px;" name="d_type" required="required">
+            <option value="stream" selected>Degree Type</option>
+            <option value=0>Comm&Mgmt</option>           
+            <option value=2>Sci&Tech</option>
+          </select>
+          <h3>Experince</h3><br><select style="padding: 15px;" name="experience" required="required">
+            <option value="experience" selected>Work Experience</option>
+            <option value=1>Yes</option>           
+            <option value=0>No</option>
+          </select>
+          <h3>Eligibility Test score</h3>
+          <input style="padding: 15px;" type="number" name="etest" placeholder="Eligibility Test Score" required="required">
+          <h3>Specialization</h3><br><select style="padding: 15px;" name="specialization" required="required">
+            <option value="specialization" selected>Specialization</option>
+            <option value=1>Mkt&HR</option>           
+            <option value=0>Mkt&Fin</option>
+          </select>
+          <h3>MBA Percentage</h3>
+          <input style="padding: 15px;" type="number" name="mba_p" placeholder="MBA Percentage" required="required">
+       
+        </div>
+       
+        <button style="background-color:rgba(155, 120, 7, 0.884);
+        padding: 10px 65px; color:rgb(4, 37, 87); margin-top: 30px; font-size:25px;" type="submit" href="/">Predict</button>
+      </div>
+      </form>
+    
+  </body>
+</html>
